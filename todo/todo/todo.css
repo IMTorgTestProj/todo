@@ -1,13 +1,21 @@
-body {	
-	font-family: verdana; 
-	background-image: url("http://javascriptmvc.com/jmvc/images/backgrounds/body.png");
+body {
+	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	background: #eeeeee;
+	color: #333333;
 	padding: 0px; margin: 0px;
 }
+
 #todos {
-	-moz-background-clip: border;
-    -moz-background-origin: padding;
-    -moz-background-size: auto auto;
-    -moz-box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-moz-border-radius: 0 0 5px 5px;
+	-o-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
     background-attachment: scroll;
     background-color: white;
     background-image: none;
@@ -19,8 +27,35 @@ body {
 }
 
 h1{
+	font-size: 36px;
+	font-weight: bold;
 	text-align: center;
+	padding: 0 0 10px 0
 }
+
+#todos .create {
+    border: 1px solid #999999;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    font-family: inherit;
+    font-size: 24px;
+    line-height: 1.4em;
+    outline: medium none;
+    padding: 6px;
+    width: 466px;
+}
+
+#instructions {
+    color: #777777;
+    margin: 10px auto;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    width: 520px;
+}
+
+#instructions li{
+	list-style-type:none;
+}
+
 .create, input.text {
 	font-size: 1.4em;
 	width: 100%;

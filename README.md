@@ -6,8 +6,8 @@ I began this fork of the useful JMVC Todo application as I felt it was missing a
 <ul>
 <li>Setup documentation (which I've written up below)</li>
 <li>A directory structure that matches what the build files originally defined require</li>
-<li>Pre-built production.js and production.css files so users could test the app right out of the box</li>
-<li>Minor changes to help it fall in line with the Backbone and Spine todo apps with similar features.</li>
+<li>Pre-built production.js and production.css files so users could test the app right out of the box (as long as steal etc. are available)</li>
+<li>Minor changes to help it fall in line with the Backbone and Spine todo apps stylistically.</li>
 </ul>
 
 ##Getting Started
