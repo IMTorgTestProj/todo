@@ -1,4 +1,9 @@
-#  JavaScriptMVC Todo Application (variation)
+#  JavaScriptMVC Todo Application (my variation)
+
+###Why this fork?
+
+I began this fork of the JMVC Todo application as I felt it was missing a number of things including documentation (which I've written up below), a directory structure that matches what the build files require and some minor changes to help it fall in line with the Backbone and Spine todo apps with similar features.
+
 
 ##Getting Started
 
