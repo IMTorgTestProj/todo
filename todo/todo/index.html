@@ -2,7 +2,6 @@
             "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type='text/css' href='todo/production.css' />
 		<title>Todos</title>
 	</head>
 	<body>
@@ -32,7 +31,7 @@
 			<input type='checkbox' name='complete' 
 				<%= this.complete ? "checked" : "" %>>
 			<span class=''><%= (this.text || "empty todo ...")%></span>
-			<span class='destroy'></span>
+			<span class='todestroy'></span>
 		</script>
 		<script type='text/ejs' id='statsEJS'>
 			<% if (total) { %>

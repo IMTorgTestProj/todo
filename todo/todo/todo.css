@@ -81,12 +81,16 @@ ul {
 .todo {
 	list-style: none;
     border-bottom: 1px solid #CCCCCC;
-    cursor: move;
     font-size: 24px;
     padding: 15px 20px 15px 0;
     position: relative;
 	margin-left: 15px;
 }
+
+.todo:hover .todestroy{
+	display:block;
+}
+
 #todo-stats {
     background: none repeat scroll 0 0 #F4FCE8;
     border-bottom-left-radius: 5px;
@@ -105,4 +109,42 @@ ul {
 
 #list {
 	margin-top: 20px;
+}
+
+
+.todestroy {
+    background: url("destroy.png") no-repeat scroll center center transparent;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 16px;
+    width: 20px;
+	display:none;
+ 	margin-right: 20px;
+}
+
+.todo-clear {
+  float: right;
+}
+
+.todo-clear a {
+  display: block;
+  line-height: 20px;
+  text-decoration: none;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -o-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -khtml-border-radius: 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #555555;
+  font-size: 11px;
+  margin-top: 8px;
+  padding: 0 10px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
 }

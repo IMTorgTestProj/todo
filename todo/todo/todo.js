@@ -174,7 +174,7 @@ $.Controller('Todos',{
 	},
 	
 	// When a todo's destroy button is clicked.
-	".todo .destroy click" : function(el){
+	".todo .todestroy click" : function(el){
 		el.closest('.todo').model().destroy();
 	},
 	
@@ -236,7 +236,6 @@ $.Controller('Todos',{
 
 
 $(function(){
-	
 	// create a todos widget with a list
 	$("#todos").todos({list : new Todo.List()});
 })
