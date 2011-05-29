@@ -1,4 +1,4 @@
-#  JavaScriptMVC Todo Application (my variation)
+#  JavaScriptMVC Todo Application
 
 ###Why this fork?
 
