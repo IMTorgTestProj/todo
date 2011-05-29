@@ -27,7 +27,22 @@ For more information on getting started with the framework as a whole, you may f
 
 ###Setup
 
-To get started with the Todo application, first clone the Todo repo to a local directory as follows:
+To get started with the Todo application, you'll first need to clone the repository to a local directory. You have a few options of how to approach this.
+
+###Cloning with submodules automatically synched
+
+The repository also contains git submodules for jQueryMVC, StealJS, FuncUnit and DocumentJS out of the box. If you would like to check-out the code for the application including all submodules you can do so as follows:
+
+<pre>
+git clone --recursive git://github.com/addyosmani/todo
+</pre>
+
+Git 1.6.5 supports this however if you're using an older version of Git you can achieve the same effect using <pre>git submodule update --init</pre>.
+
+
+###Cloning with submodules manually 
+
+Alternatively, you can checkout the main application files and clone the dependancies manually.
 
 <pre>
 git clone git@github.com:addyosmani/todo.git	
