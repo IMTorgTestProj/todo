@@ -22,7 +22,7 @@ It's broken down into 4 separate projects that can be used independently of each
 	<li><b>DocumentJS</b> - A JavaScript documentation framework</li>
 </ul>
 
-For more information on getting started with the framework as a whole, you may find Justin Meyer's documentation on it here https://gist.github.com/867069/e999ec9a4e47903ce5e984f6d571101110a36f01 quite helpful.
+For more information on getting started with the framework as a whole, you may find Justin Meyer's documentation on it here https://gist.github.com/867069/e999ec9a4e47903ce5e984f6d571101110a36f01 quite helpful. It discusses classes, models, views and controllers and is an overall good read for any developers wishing to begin using JMVC.
 
 
 ###Setup
@@ -71,7 +71,7 @@ todo
 
 Note that as per JupiterIT's original Todo application, jquerymx is actually stored in the directory called jquery in case we decide to sync up any changes made without worrying about path differences.
 
-###Building 
+###Building
 
 Within todo/todo, you'll find the main application (todo.js) as well as two additional folders. The *scripts* folder contains the build files needed to build the final production files required for the app to run, whilst the *test* folder contains the FuncUnit and QUnit files required for testing. Let's take a look at todo/todo/scripts/build.js:
 
@@ -92,9 +92,10 @@ We finally define the build actions required, which essentially allows us to spe
 
 You of course don't have to output your build files to the same directory as your application source, however as both our outputs have names which are different to the source files, I think this works fine for our example.
 
+Finally, to perform the application build so that JMVC outputs the production-ready version of your code (and also includes only those features which you've used), execute the following command where we pass our build.js file as an argument to steal's builder.
 
-
-
-
+<pre>
+./steal/js todo/todo/scripts/build.js
+</pre>
 
 
