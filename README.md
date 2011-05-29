@@ -43,6 +43,8 @@ git submodule add git://github.com/jupiterjs/funcunit.git funcunit
 git submodule add git://github.com/jupiterjs/documentjs.git documentjs
 </pre>
 
+Note that as per JupiterIT's original Todo application, jquerymx is actually stored in the directory called jquery in case we decide to sync up any changes made without worrying about path differences.
+
 ###Cloning
 
 Cloning repositories using GitHub is a fairly straight-forward process and the todo application just requires the following commands to be executed to get you setup:
@@ -69,7 +71,7 @@ todo
 		test
 </pre>
 
-Note that as per JupiterIT's original Todo application, jquerymx is actually stored in the directory called jquery in case we decide to sync up any changes made without worrying about path differences.
+
 
 ###Building
 
