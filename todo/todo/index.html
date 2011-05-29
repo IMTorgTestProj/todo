@@ -8,7 +8,9 @@
 	<body>
 	    <div id='todos'>
     		<h1>Todos</h1>
-			<input type='text' class='create' placeholder="What needs to be done?"/>
+			<div class="content">
+				<input type='text' class='create' placeholder="What needs to be done?"/>
+			</div>
 			<ul id='list'></ul>
 			<div id='todo-stats'>
 				
@@ -36,7 +38,7 @@
 			<% if (total) { %>
 		        <span class="todo-count">
 		          <span class="number"><%= remaining %></span>
-		          <span class="word"><%= remaining == 1 ? 'item' : 'items' %></span> left to do.
+		          <span class="word"><%= remaining == 1 ? 'item' : 'items' %></span> left.
 		        </span>
 		   <% } %>
 		   <% if (completed) { %>
