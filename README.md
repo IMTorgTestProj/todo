@@ -92,7 +92,7 @@ We finally define the build actions required, which essentially allows us to spe
 
 You of course don't have to output your build files to the same directory as your application source, however as both our outputs have names which are different to the source files, I think this works fine for our example.
 
-Finally, to perform the application build so that JMVC outputs the production-ready version of your code (and also includes only those features which you've used), execute the following command where we pass our build.js file as an argument to steal's builder.
+Finally, to perform the application build so that JMVC outputs the production-ready version of your code, execute the following command where we pass our build.js file as an argument to steal's builder.
 
 <pre>
 ./steal/js todo/todo/scripts/build.js
