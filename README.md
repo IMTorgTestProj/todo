@@ -2,18 +2,27 @@
 
 ###Why this fork?
 
-I began this fork of the JMVC Todo application as I felt it was missing a number of things including documentation (which I've written up below), a directory structure that matches what the build files require and some minor changes to help it fall in line with the Backbone and Spine todo apps with similar features.
-
+I began this fork of the useful JMVC Todo application as I felt it was missing a number of things including:
+<ul>
+<li>Setup documentation (which I've written up below)</li>
+<li>A directory structure that matches what the build files originally defined require</li>
+<li>Pre-built production.js and production.css files so users could test the app right out of the box</li>
+<li>Minor changes to help it fall in line with the Backbone and Spine todo apps with similar features.</li>
+</ul>
 
 ##Getting Started
 
-JMVC is broken down into 4 separate projects that can be used independently of each other. These are:
+JavaScriptMVC is a jQuery-based JavaScript framework that's excellent as a comprehensive front-end solution for structuring applications using the MVC architecture pattern.
+
+It's broken down into 4 separate projects that can be used independently of each other. These are:
 <ul>
 	<li><b>jQueryMVC</b> - MVC extensions for jQuery</li>
 	<li><b>StealJS</b> - Dependency management, build process, code generators</li>
 	<li><b>FuncUnit</b> - A web testing framework</li>
 	<li><b>DocumentJS</b> - A JavaScript documentation framework</li>
 </ul>
+
+For more information on getting started with the framework as a whole, you may find Justin Meyer's documentation on it here https://gist.github.com/867069/e999ec9a4e47903ce5e984f6d571101110a36f01 quite helpful.
 
 
 ###Setup
@@ -60,4 +69,32 @@ todo
 		test
 </pre>
 
-Note that as per JupiterIT's original Todo application, jquerymx is actually stored in the directory called jquery in case we decide to sync up any changes made to the codebase.
+Note that as per JupiterIT's original Todo application, jquerymx is actually stored in the directory called jquery in case we decide to sync up any changes made without worrying about path differences.
+
+###Building 
+
+Within todo/todo, you'll find the main application (todo.js) as well as two additional folders. The *scripts* folder contains the build files needed to build the final production files required for the app to run, whilst the *test* folder contains the FuncUnit and QUnit files required for testing. Let's take a look at todo/todo/scripts/build.js:
+
+<pre>
+load("steal/rhino/steal.js");
+steal.plugins('steal/build','steal/build/scripts','steal/build/styles',function(){
+	steal.build('todo/todo/scripts/build.html',{to: 'todo/todo'});
+});
+</pre>
+
+In this simple build file, we're telling out build process to load steal.js from the rhino directory (for more on Rhino, see here: http://www.mozilla.org/rhino/doc.html) and then *steal* (ie. load within the context of a script loader) the steal plugins we'll be using for our build. 
+
+We finally define the build actions required, which essentially allows us to specify the build source (todo/todo/scripts/build.html) and the build target (todo/todo). In case you're wondering what build.html does, it effectively tells steal.js to build the application within the folder todo/todo as follows: 
+
+<pre>
+&lt;script type=&#39;text/javascript&#39; src=&#39;../../../steal/steal.js?todo/todo&#39;&gt;
+</pre>
+
+You of course don't have to output your build files to the same directory as your application source, however as both our outputs have names which are different to the source files, I think this works fine for our example.
+
+
+
+
+
+
+
