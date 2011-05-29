@@ -37,18 +37,17 @@ The repository also contains git submodules for jQueryMVC, StealJS, FuncUnit and
 git clone --recursive git://github.com/addyosmani/todo
 </pre>
 
-Git 1.6.5 supports this however if you're using an older version of Git you can achieve the same effect using <pre>git submodule update --init</pre>.
-
+Git 1.6.5 supports this however if you're using an older version of Git you can achieve the same effect using <pre>git submodule update --init</pre>
 
 ###Cloning with submodules manually 
 
-Alternatively, you can checkout the main application files and clone the dependancies manually.
+Alternatively, you can checkout the main application files and clone the dependancies manually. To checkout the app simply execute:
 
 <pre>
 git clone git@github.com:addyosmani/todo.git	
 </pre>
 
-You'll then need to add a few project dependancies to your todo project directory. You have two options for how to achieve this, either using *submodules* to checkout the submodules as their own repositories (recommended) or alternatively by cloning their repos locally.
+You can then either use *submodules* to checkout the submodules as their own repositories (eg. if you forked them from JMVC and wished to keep track of your own versions) or alternatively by cloning their repos locally.
 
 ###Submodules
 <pre>
