@@ -57,7 +57,12 @@ $.Model('Todo',{
 	 *     Todo.destroyAll(1, success())
 	 */
 	destroy: function(id, success){
-		this.destroyAll([id], successs)
+
+		this.destroyAll(id, success);
+		this.localStore(function(todos){
+			delete todos[id]
+		});
+				
 	},
 	/**
 	 * Creates a todo with the provided attrs.  This allows:
@@ -168,6 +173,7 @@ $.Controller('Todos',{
 	// the clear button is clicked
 	".todo-clear click" : function(){
 		// gets completed todos in the list, destroys them
+		
 		this.options.list.completed()
 			.destroyAll(); 
 
@@ -175,7 +181,10 @@ $.Controller('Todos',{
 	
 	// When a todo's destroy button is clicked.
 	".todo .todestroy click" : function(el){
+	
 		el.closest('.todo').model().destroy();
+		
+
 	},
 	
 	// when an item is removed from the list ...
@@ -194,6 +203,7 @@ $.Controller('Todos',{
 	
 	// when the checkbox changes, update the model
 	".todo [name=complete] change" : function(el, ev){
+		
 		var todo = el.closest('.todo').model().update({
 			complete : el.is(':checked')
 		});
