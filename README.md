@@ -22,7 +22,7 @@ It's broken down into 4 separate projects that can be used independently of each
 	<li><b>DocumentJS</b> - A JavaScript documentation framework</li>
 </ul>
 
-For more information on getting started with the framework as a whole, you may find Justin Meyer's documentation on it here https://gist.github.com/867069/e999ec9a4e47903ce5e984f6d571101110a36f01 quite helpful. It discusses classes, models, views and controllers and is an overall good read for any developers wishing to begin using JMVC.
+For more information on getting started with the framework as a whole, you may find Justin Meyer's documentation on it here https://gist.github.com/989117 quite helpful. It discusses classes, models, views and controllers and is an overall good read for any developers wishing to begin using JMVC.
 
 
 ###Setup
